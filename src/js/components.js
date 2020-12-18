@@ -34,7 +34,7 @@ export const crearTodoHtml = (todo) => {
 
 const incrementarContador = () => {
     let contador = 0;
-    todoList.todos.forEach(todo => (todo.completado) ? contador++ : 0);
+    todoList.todos.forEach(todo => (!todo.completado) ? contador++ : 0);
     contadorHtml.innerHTML = `<strong>${contador}</strong> pendiente(s)`;
 }
 
